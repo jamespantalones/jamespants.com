@@ -4,11 +4,11 @@
 //
 //-----------------------------------------
 
-const LAZIES = document.getElementsByClassName('lazy');
-let WIN_HEIGHT = window.innerHeight;
+var LAZIES = document.getElementsByClassName('lazy');
+var WIN_HEIGHT = window.innerHeight;
 
 
-const deferWork = fn => {
+var deferWork = fn => {
   if (typeof requestIdleCallback !== 'undefined') {
     window.requestIdleCallback(fn, { timeout: 60 });
   } else if (typeof requestAnimationFrame !== 'undefined') {
@@ -34,7 +34,7 @@ function load(t) {
 
 function onScroll() {
   deferWork(() => {
-    for (let i = 0; i < LAZIES.length; i++) {
+    for (var i = 0; i < LAZIES.length; i++) {
       const t = LAZIES[i];
       const { top } = t.getBoundingClientRect();
       if (top <= WIN_HEIGHT && !t.classList.contains('loaded')) {
@@ -51,11 +51,6 @@ function onResize() {
 }
 
 function start() {
-  const now = new Date();
-  console.log(now);
-  if (now.getDay() === 5) {
-    document.body.classList.add('friday');
-  }
   window.addEventListener('scroll', onScroll, { passive: true });
   window.addEventListener('resize', onResize, { passive: true });
 }
