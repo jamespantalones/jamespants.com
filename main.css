@@ -1,0 +1,285 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #1b191f;
+  background: rgb(255, 255, 249);
+}
+
+@media (prefers-color-scheme: dark) {
+  html,
+  body {
+    background: #1b191f;
+    color: rgb(255, 255, 249);
+  }
+}
+
+body {
+  font-size: 12px;
+  overflow-x: hidden;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+table {
+  font-size: 12px;
+  text-align: left;
+}
+
+table th {
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+@keyframes zoomOut {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, -100000px);
+  }
+}
+
+a {
+  transition: all 0.2s ease;
+  border-bottom: 1px solid transparent;
+  font-weight: bold;
+}
+
+a.mail {
+  display: inline;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.sidebar {
+  margin: 10px 10px 15px 10px;
+}
+
+.sidebar p {
+  margin: 0;
+  line-height: 1.25;
+  font-size: 48px;
+}
+
+.sidebar a {
+  color: inherit;
+}
+
+.sidebar a:hover {
+  border-bottom: 1px solid transparent;
+}
+
+a:hover {
+  border-bottom: 1px solid inherit;
+}
+
+.main__wrapper {
+  display: grid;
+  grid-gap: 0;
+  width: calc(100% - 20px);
+  margin-left: 10px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-auto-rows: 50vh;
+  padding-bottom: 100px;
+
+}
+
+.centered__row {
+  width: calc(100% - 20px);
+  margin: 50px 10;
+  border: 1px solid inherit;
+  display: block;
+  padding: 50px 20px;
+}
+
+.centered__row ul li {
+  display: block;
+  text-align: left;
+}
+
+.centered__row.music__row ul li::after {
+  content: ''
+}
+
+
+.centered__row h2 {
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+
+@media (min-width: 813px) {
+  .main__wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+
+@media (min-width: 1020px) {
+  .main__wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.main__wrapper>div.main__item {
+  border: 1px solid;
+  margin: 0 -1px -1px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main__item {
+
+  position: relative;
+  text-align: center;
+  flex-direction: column;
+}
+
+.main__item p {
+  max-width: 300px;
+  margin: 5px;
+}
+
+.main__item p.description {
+  font-style: italic;
+}
+
+.main__item p a {
+  text-decoration: none;
+  border-bottom: 2px solid;
+  color: inherit;
+}
+
+.main__item.full {
+  width: 100%;
+  align-items: center;
+}
+
+.main__item.high {
+  height: 25vh;
+}
+
+.main__item.full p {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.main__item.half {
+  width: 100%;
+  align-items: center;
+}
+
+.main__item_year {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+.main__item_type {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  text-transform: uppercase;
+  font-size: 20px;
+  text-shadow: 0 0 2px black;
+}
+
+hr {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+}
+
+ul {
+  text-align: center;
+  margin: 0 auto;
+  list-style-type: none;
+  padding: 0;
+}
+
+ul a {
+  color: inherit;
+}
+
+.award {
+  position: fixed;
+  transform: translate3d(0, 0, 0) rotate(30deg);
+  top: 20px;
+  right: 20px;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  z-index: 99;
+  font-size: 10px;
+  background: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.award a {
+  color: white;
+  text-decoration: none;
+}
+
+.bleed {
+  position: relative;
+  z-index: 3;
+}
+
+.bleed.end {
+  margin-top: 100px;
+}
+
+.bleed img {
+  width: 100%;
+  width: 100vw;
+  opacity: 0;
+  transition: opacity 0.3s linear;
+}
+
+.bleed img.loaded {
+  opacity: 1;
+}
+
+.friday__doll {
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  text-align: center;
+  z-index: 99;
+  display: none;
+}
+
+.friday__doll p {
+  text-transform: uppercase;
+  font-size: 10px;
+  margin: 0;
+}
+
+.friday__doll img {
+  width: 50px;
+}
