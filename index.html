@@ -56,14 +56,19 @@
         margin: 10px 10px 15px 10px;
       }
 
-      .sidebar p {
+      .sidebar p,
+      .sidebar h1,
+      .sidebar h2 {
         margin: 0;
         line-height: 1.25;
         font-size: 22px;
+        font-weight: normal;
       }
 
       @media (min-width: 1020px) {
-        .sidebar p {
+        .sidebar p,
+        .sidebar h1,
+        .sidebar h2 {
           font-size: 48px;
         }
       }
@@ -85,9 +90,9 @@
 
   <body>
     <div class="sidebar">
-      <p>JAMES SINGLETON</p>
-      <p>Engineering (Bloomberg) / Music (Stones Throw) / Radio (NTS)</p>
-      <p>Node / React / Golang / Typescript / WebGL / SP303 / Drumset</p>
+      <h1>JAMES SINGLETON</h1>
+      <h2>Engineering (Bloomberg) / Music (Stones Throw) / Radio (NTS)</h2>
+      <h2>Node / React / Golang / Typescript / WebGL / SP303 / Drumset</h2>
       <br />
       <br />
       <p>
@@ -109,6 +114,7 @@
         ones are now in a state of disrepair since that organization shut down.
         RIP.
       </p>
+      <br />
 
       <p>
         I also occasionally make music as
@@ -643,7 +649,7 @@
     <div class="bleed end">
       <img
         src="./hat.jpg"
-        height="100vh"
+        width="100vw"
         loading="lazy"
         alt="James Pants + James Singleton"
       />

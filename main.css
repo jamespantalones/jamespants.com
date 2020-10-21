@@ -1,6 +1,3 @@
-
-
-
 table {
   font-size: 12px;
   text-align: left;
@@ -11,9 +8,6 @@ table th {
   text-transform: uppercase;
 }
 
-
-
-
 .main__wrapper {
   display: grid;
   grid-gap: 0;
@@ -22,7 +16,6 @@ table th {
   grid-template-columns: repeat(1, 1fr);
   grid-auto-rows: 50vh;
   padding-bottom: 100px;
-
 }
 
 .centered__row {
@@ -39,9 +32,8 @@ table th {
 }
 
 .centered__row.music__row ul li::after {
-  content: ''
+  content: '';
 }
-
 
 .centered__row h2 {
   font-weight: normal;
@@ -49,14 +41,11 @@ table th {
   font-size: 14px;
 }
 
-
 @media (min-width: 813px) {
   .main__wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
-
 
 @media (min-width: 1020px) {
   .main__wrapper {
@@ -64,7 +53,7 @@ table th {
   }
 }
 
-.main__wrapper>div.main__item {
+.main__wrapper > div.main__item {
   border: 1px solid;
   margin: 0 -1px -1px 0;
   display: flex;
@@ -73,7 +62,6 @@ table th {
 }
 
 .main__item {
-
   position: relative;
   text-align: center;
   flex-direction: column;
@@ -185,12 +173,6 @@ ul a {
 .bleed img {
   width: 100%;
   width: 100vw;
-  opacity: 0;
-  transition: opacity 0.3s linear;
-}
-
-.bleed img.loaded {
-  opacity: 1;
 }
 
 .friday__doll {
