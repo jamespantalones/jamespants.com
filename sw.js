@@ -1,4 +1,4 @@
-const VERSION = '0.1.1';
+const VERSION = '0.1.2';
 const CACHE_NAME = `james-pants-${VERSION}`;
 self.addEventListener('install', e => {
   const timeStamp = Date.now();
