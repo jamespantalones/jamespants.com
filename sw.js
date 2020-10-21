@@ -1,9 +1,9 @@
-const VERSION = '0.1.2';
+const VERSION = '0.1.3';
 const CACHE_NAME = `james-pants-${VERSION}`;
-self.addEventListener('install', e => {
+self.addEventListener('install', (e) => {
   const timeStamp = Date.now();
   e.waitUntil(
-    caches.open(CACHE_NAME).then(cache => {
+    caches.open(CACHE_NAME).then((cache) => {
       return cache
         .addAll([
           '/',
@@ -12,23 +12,23 @@ self.addEventListener('install', e => {
           '/hat.jpg',
           '/tweet_tile.jpg',
           '/tweet.png',
-          '/main.js'
+          '/main.js',
         ])
         .then(() => self.skipWaiting());
     })
   );
 });
 
-self.addEventListener('activate', event => {
+self.addEventListener('activate', (event) => {
   event.waitUntil(self.clients.claim());
 });
 
-self.addEventListener('fetch', event => {
+self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches
       .open(CACHE_NAME)
-      .then(cache => cache.match(event.request, { ignoreSearch: true }))
-      .then(response => {
+      .then((cache) => cache.match(event.request, { ignoreSearch: true }))
+      .then((response) => {
         return response || fetch(event.request);
       })
   );
