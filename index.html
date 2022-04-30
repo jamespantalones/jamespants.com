@@ -22,22 +22,21 @@
         min-height: 100%;
         margin: 0;
         padding: 0;
-        color: #1b191f;
+        color: #fff
         background: rgb(255, 255, 249);
       }
 
       @media (prefers-color-scheme: dark) {
         html,
         body {
-          background: #1b191f;
-          color: rgb(255, 255, 249);
+          background: white;
         }
       }
 
       body {
-        font-size: 12px;
+        font-size: 16px;
         overflow-x: hidden;
-        font-family: sans-serif;
+        font-family: serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
       }
@@ -45,7 +44,6 @@
       a {
         transition: all 0.2s ease;
         border-bottom: 1px solid transparent;
-        font-weight: bold;
       }
 
       a.mail {
@@ -90,49 +88,11 @@
 
   <body>
     <div class="sidebar">
-      <h1>JAMES SINGLETON</h1>
+      <h1>JAMES PANTS / JAMES SINGLETON</h1>
       <h2>Engineering (Bloomberg) / Music (Stones Throw) / Radio (NTS)</h2>
-      <h2>Node / React / Golang / Typescript / WebGL / SP303 / Drumset</h2>
       <br />
+      <h2>Node / Go / Typescript / WebGL / SP303 / Drumset</h2>
       <br />
-      <p>
-        Currently an engineer at
-        <a
-          href="https://www.bloomberg.com/graphics"
-          target="_blank"
-          rel="noreferrer noopener"
-          >Bloomberg Graphics</a
-        >, working mostly on internal newsroom tools. Below is a small selection
-        of fun standalone projects I've done over the years, although sadly
-        pretty much all the
-        <a
-          href="https://www.redbullmusicacademy.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Red Bull Music Academy</a
-        >
-        ones are now in a state of disrepair since that organization shut down.
-        RIP.
-      </p>
-      <br />
-
-      <p>
-        I also occasionally make music as
-        <a
-          href="https://www.stonesthrow.com/artist/jamespants/"
-          target="_blank"
-          rel="noopener noreferrer"
-          >James Pants</a
-        >
-        and do a monthly
-        <a
-          href="https://www.nts.live/shows/creepzone"
-          target="_blank"
-          rel="noopener noreferrer"
-          >radio show</a
-        >
-        with my pal, Marc Schaller, on NTS Radio.
-      </p>
 
       <p>
         <a class="mail" href="mailto:jamespants@gmail.com">Contact</a> /
@@ -148,9 +108,11 @@
       <br />
     </div>
 
+    <!---->
+
     <main class="main__wrapper">
       <div class="main__item">
-        <div class="main__item_year">2016 - Present</div>
+        <div class="main__item_year">∞</div>
         <div class="main__item_type">📡</div>
         <p>
           <a href="https://www.nts.live/shows/creepzone" target="blank"
@@ -159,6 +121,28 @@
         </p>
         <p>Monthly radio show with my German pal, Marc Schaller.</p>
         <p class="description">NTS Radio</p>
+      </div>
+
+      <div class="main__item">
+        <div class="main__item_year">2022</div>
+        <div class="main__item_type">⌨️</div>
+        <p>
+          <a href="https://e-drums-stg.vercel.app/" target="blank">E-Drums ⟶</a>
+        </p>
+        <p>Simple Euclidean rhythm generator</p>
+      </div>
+
+      <div class="main__item">
+        <div class="main__item_year">∞</div>
+        <div class="main__item_type">🍄</div>
+        <p>
+          <a
+            href="https://www.inaturalist.org/observations?place_id=any&user_id=jsingleton20&verifiable=any"
+            target="blank"
+            >Mushrooms ⟶</a
+          >
+        </p>
+        <p>Stuff I find out in the woods</p>
       </div>
 
       <div class="main__item">
@@ -643,15 +627,6 @@
         width="100vw"
         loading="lazy"
         alt="A very famous tweet"
-      />
-    </div>
-
-    <div class="bleed end">
-      <img
-        src="./hat.jpg"
-        width="100vw"
-        loading="lazy"
-        alt="James Pants + James Singleton"
       />
     </div>
   </body>
