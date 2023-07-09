@@ -84,6 +84,7 @@
           <a
             href="https://jamespants-data.s3.amazonaws.com/James_Pants_COOL_MPEGs_VOL_1.zip"
             download
+            data-title="James_Pants_COOL_MPEGs_VOL_1"
           >
             <button>Download</button>
           </a>
@@ -576,5 +577,16 @@
         alt="A very famous tweet"
       />
     </div>
+    <script type="module">
+      const downloads = document.querySelectorAll("a[download]");
+      for (let d of downloads) {
+        const title = d.getAttribute("data-title");
+        if (gtag) {
+          gtag("event", "download", {
+            item: title,
+          });
+        }
+      }
+    </script>
   </body>
 </html>
